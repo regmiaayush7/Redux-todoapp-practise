@@ -1,0 +1,15 @@
+.form {
+    padding: 12px;
+    width: 50%;
+    background-color: rgb(169, 141, 141);
+    border-radius: 25px;
+}
+
+.title{
+    padding:3px;
+}
+
+.addbtn{
+    padding: 4px;
+    margin: 2px;
+}
