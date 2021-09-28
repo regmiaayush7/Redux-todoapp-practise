@@ -13,7 +13,7 @@ const Todoreducer = (state=INITIAL_STATE, action) =>{
         case 'REMOVE_TODO':
                 return {
                     ...state,
-                    todolist:[ ...state.todolist.filter((todo, index) => index !== payload)]
+                    todolist:[...state.todolist.filter((todo, index) => index !== action.payload)]
                 };
         default:
             return state;
