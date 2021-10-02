@@ -8,9 +8,9 @@ const Todolist = ({mainreducer, removeTodo}) => {
     <div className='container mt-3'>
         <h2 className='lead text-center'>To Do List</h2>
             {
-              mainreducer.map((todo,index) => (
-                <div className='card' key={index}>
-                    <p>{todo}<span className='remove' onClick={ index => removeTodo(index)}>&#10005;</span></p>              
+              mainreducer.map((todo) => (
+                <div className='card' key={todo.id}>
+                    <p>{todo.value}<span className='remove' onClick={ () => removeTodo(todo.id)}>&#10005;</span></p>              
                  </div>
               ))}
     </div>

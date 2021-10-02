@@ -1,7 +1,10 @@
 
 export const addTodo = value => ({
     type: 'ADD_TODO',
-    payload : value
+    payload : {
+        id: new Date().getTime().toString(),
+        value: value
+    }
 });
 
 export const removeTodo = index =>({

@@ -5,15 +5,20 @@ const INITIAL_STATE = {
 const Todoreducer = (state=INITIAL_STATE, action) =>{
     switch (action.type) {
         case 'ADD_TODO':
-            return{
+            const {id,value} = action.payload;
+            return{ 
                 ...state,
-                todolist: [...state.todolist, action.payload]
+                todolist:[...state.todolist,{
+                    id: id,
+                    value: value
+                }]
             };
     
         case 'REMOVE_TODO':
+            
                 return {
                     ...state,
-                    todolist:[...state.todolist.filter((todo, index) => index !== action.payload)]
+                    todolist:[...state.todolist.filter((todo) => todo.id !== action.payload)]
                 };
         default:
             return state;
